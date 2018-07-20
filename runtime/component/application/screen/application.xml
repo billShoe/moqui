@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen require-authentication="false" include-child-content="true">
+	<transition name="ApplicationEntity" method="post">
+	<!-- <path-parameter name="partyId"/> -->
+    	<service-call name="application.ApplicationServices.createApplication" in-map="ec.web.parameters" web-send-json-response="true"/>
+    <default-response type="none"/>
+	</transition>
+	<transition name="getApplication" method="get" read-only="true">
+	  	<service-call name="application.ApplicationServices.get#Application"/>
+	    <default-response type="none"/>
+	</transition>
+    <subscreens default-item="example.html"/>
+    <widgets>
+        <label type="h1" text="Application"/>
+        <subscreens-active/>
+    </widgets>
+</screen>

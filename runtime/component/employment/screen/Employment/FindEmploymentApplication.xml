@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<screen require-authentication="anonymous-all"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
+    
+	<transition name="findMkEmploymentApplication"><default-response url="."/></transition>
+
+ 	<transition name="deleteLocalizedEntityField">
+ 		<service-call name="delete#moqui.basic.LocalizedEntityField"/>
+ 		<default-response url="."/>
+ 	</transition>
+
+    <actions>
+        <entity-find entity-name="employment.MkEmploymentApplication" list="mkEmploymentApplicationList">
+            <search-form-inputs/></entity-find>
+    </actions>
+	<widgets>
+	<form-list name="ListMkEmploymentApplications" list="mkEmploymentApplicationList" transition="findMkEmploymentApplication">
+			<row-actions>
+				<entity-find-one value-field="person" entity-name="mantle.party.Person" auto-field-map="context" />
+			</row-actions>
+		<field name="PartyId" from="person.partyId">
+			<header-field show-order-by="true">
+			<text-find hide-options="true" size="10"/></header-field>
+			<default-field><display /></default-field>
+		</field>
+		<field name="employmentApplicationId">
+        	<header-field show-order-by="true">
+            <text-find hide-options="true" size="10"/></header-field>
+        <default-field><display/></default-field>
+    	</field>
+		<field name="firstName">
+        	<header-field show-order-by="true">
+            <text-find hide-options="true" size="10"/></header-field>
+        <default-field><display/></default-field>
+    	</field>
+		<field name="lastName">
+        	<header-field show-order-by="true">
+            <text-find hide-options="true" size="10"/></header-field>
+        <default-field><display/></default-field>
+    	</field>
+		<field name="phoneNumber">
+        	<header-field show-order-by="true">
+            <text-find hide-options="true" size="10"/></header-field>
+        <default-field><display/></default-field>
+    	</field>
+		<field name="email">
+        	<header-field show-order-by="true">
+            <text-find hide-options="true" size="20"/></header-field>
+        <default-field><display/></default-field>
+    	</field>
+		<field name="resume">
+        	<header-field show-order-by="true">
+            </header-field>
+        <default-field>
+ 			<link text="Resume" url="dbresource://employmentApplication/100000"></link>
+		</default-field>
+    	</field>
+			<field name="lastUpdatedStamp">
+        	<header-field show-order-by="true">
+            </header-field>
+        <default-field><display/></default-field>
+    	</field>
+ 		<field name="delete">
+ 			<header-field title="Find"><submit/></header-field>
+ 		<default-field>
+ 			<link text="Delete" url="deleteLocalizedEntityField">
+ 			<parameter name="entityName"/>
+ 			<parameter name="fieldName"/><parameter name="locale"/></link>
+ 		</default-field>
+ 		</field>
+	</form-list>
+	</widgets>
+</screen>

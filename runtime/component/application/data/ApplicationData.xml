@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-facade-xml type="seed">
+    <artifactGroups artifactGroupId="APPLICATION_API" description="REST API">
+        <artifacts artifactTypeEnumId="AT_REST_PATH" inheritAuthz="Y" artifactName="/application/ApplicationEntity"/>
+        <!-- Full permissions for the ADMIN user group -->
+        <authz artifactAuthzId="APPLICATION_API_ADMIN" userGroupId="ADMIN" authzTypeEnumId="AUTHZT_ALWAYS" authzActionEnumId="AUTHZA_ALL"/>
+    </artifactGroups>
+	<application.Application firstName="Alex" lastName="Hamilton" phoneNumber="9998887777" email="ahamilton@whitehouse.gov" address="1600 Pennsilvania Ave" city="Washington D.C." state="District of Colombia" zipCode="20500" currentEmployer="U.S. Government" linkedIn="nationalbank@linked.com"/>
+</entity-facade-xml>

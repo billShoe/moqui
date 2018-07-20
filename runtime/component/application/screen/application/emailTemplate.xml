@@ -1,0 +1,6 @@
+<moqui.basic.email.EmailTemplate emailTemplateId="NEW_APPLICATION"
+ description="Application Notification"
+ emailServerId="SYSTEM" webappName="webroot"
+ bodyScreenLocation="component://application/screen/emailApplication.xml"
+ fromAddress="cole.halsell@mkdecision.com" ccAddresses="" bccAddresses=""
+ subject="Application Notification"/>

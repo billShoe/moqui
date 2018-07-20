@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities>
+<entity entity-name="Application" package="application">
+        <field name="partyId" type="id" is-pk="true"/>
+        <field name="firstName" type="text-medium"/>
+		<field name="lastName" type="text-medium"/>
+        <field name="phoneNumber" type="text-medium"/>
+		<field name="email" type="text-medium"/>
+        <field name="address" type="text-medium"/>
+		<field name="city" type="text-medium"/>
+        <field name="state" type="text-medium"/>
+		<field name="zipCode" type="text-medium"/>
+        <field name="currentEmployer" type="text-medium"/>
+		<field name="linkedIn" type="text-medium"/>
+		<field name="resume" type="text-medium"/>
+	</entity>
+</entities>

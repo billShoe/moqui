@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen require-authentication="anonymous-all" menu-image="glyphicon glyphicon-flash" menu-image-type="icon">
+    <subscreens default-item="FindEmploymentApplication"/>
+
+	<transition name="createEmploymentApplication" method="post">
+    	<service-call name="employment.EmploymentServices.create#EmploymentApplication" in-map="ec.web.parameters" web-send-json-response="true"/>
+    <default-response type="none"/>
+	</transition>
+	<transition name="getEmploymentApplication" method="get" read-only="true">
+	  	<service-call name="employment.EmploymentServices.get#EmploymentApplication"/>
+	    <default-response type="none"/>
+	</transition>
+
+	<widgets>
+        <label type="h1" text="Employment Workspace"/>
+        <subscreens-panel id="workspace" type="popup"/>
+    </widgets>
+</screen>

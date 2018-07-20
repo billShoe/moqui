@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities>
+	<entity entity-name="MkEmploymentApplication" package="employment">
+        <field name="employmentApplicationId" type="id" is-pk="true"/>
+		<field name="firstName" type="text-medium"/>
+        <field name="lastName" type="text-medium" enable-audit-log="true"/>
+        <field name="phoneNumber" type="text-medium"/>
+		<field name="email" type="text-medium"/>
+        <field name="address" type="text-medium"/>
+		<field name="city" type="text-medium"/>
+        <field name="state" type="text-medium"/>
+		<field name="zipCode" type="text-medium"/>
+		<field name="currentEmployer" type="text-medium"/>
+        <field name="resume" type="text-medium"/>
+        <field name="linkedInLink" type="text-short"/>
+        <field name="gitHubLink" type="text-short"/>
+        <field name="portfolioLink" type="text-short"/>
+        <field name="otherLink" type="text-short"/>
+        <field name="hearAboutMk" type="text-short"/>
+        <field name="SpecifyHearAboutMk" type="text-short"/>
+        <field name="workInSd" type="text-short"/>
+        <field name="mkRightFit" type="text-medium"/>
+		<relationship type="one" related="mantle.humanres.employment.EmploymentApplication"/>
+	</entity>
+</entities>

@@ -1,0 +1,48 @@
+<services>
+<service verb="create" noun="Application" type="inline" allow-remote="true">
+    <in-parameters>
+        <parameter name="partyId"/>
+        <parameter name="firstName"/>
+		<parameter name="lastName"/>
+        <parameter name="phoneNumber"/>
+		<parameter name="email"/>
+        <parameter name="address"/>
+		<parameter name="city"/>
+        <parameter name="state"/>
+		<parameter name="zipCode"/>
+        <parameter name="currentEmployer"/>
+		<parameter name="linkedIn"/>
+		<parameter name="resumeFile" type="Blob"/>
+    </in-parameters>
+    <out-parameters>
+    </out-parameters>
+    <actions>
+        <service-call name="mantle.party.PartyServices.create#Person" in-map="context" out-map="context"/>
+		<script>
+			context.resume = "dbresource://application/"+context.partyId
+			def resumeReference = ec.getResource().getLocationReference(context.resume)
+			resumeReference.putStream(context.resumeFile.getInputStream())
+			def resource = resumeReference.getDbResourceFile()
+			resource.set("mimeType", context.resumeFile.getContentType())
+			resource.update()
+		</script>
+        <entity-make-value entity-name="application.Application" value-field="application"/>
+        <entity-set value-field="application" include="all"/>
+        <entity-create value-field="application"/>
+    </actions>
+</service>
+
+<service verb="get" noun="Application" type="inline" allow-remote="true">
+	<in-parameters>
+		<parameter name="partyId"/>
+	</in-parameters>
+	<out-parameters>
+	</out-parameters>
+	<actions>
+		<script>
+			ec.getWeb().sendResourceResponse("dbresource://application/"+context.partyId)
+		</script>
+		<return />
+	</actions>
+</service>
+</services>

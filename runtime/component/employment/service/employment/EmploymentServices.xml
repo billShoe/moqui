@@ -1,0 +1,63 @@
+<services>
+<service verb="create" noun="EmploymentApplication" type="inline" allow-remote="true">
+    <in-parameters>
+		<parameter name="employmentApplicationId"/>
+        <parameter name="partyId"/>
+        <parameter name="firstName"/>
+		<parameter name="lastName"/>
+        <parameter name="phoneNumber"/>
+		<parameter name="email"/>
+        <parameter name="address"/>
+		<parameter name="city"/>
+        <parameter name="state"/>
+		<parameter name="zipCode"/>
+        <parameter name="currentEmployer"/>
+		<parameter name="resumeFile" type="Blob"/>
+		<parameter name="linkedInLink"/>
+        <parameter name="gitHubLink"/>
+        <parameter name="portfolioLink"/>
+        <parameter name="otherLink"/>
+        <parameter name="hearAboutMk"/>
+        <parameter name="SpecifyHearAboutMk"/>
+        <parameter name="workInSd"/>
+        <parameter name="mkRightFit"/>
+    </in-parameters>
+    <out-parameters>
+    </out-parameters>
+    <actions>
+        <service-call name="mantle.party.PartyServices.create#Person" in-map="context" out-map="context"/>
+		<set field="applyingPartyId" from="partyId"/>
+        <entity-make-value entity-name="mantle.humanres.employment.EmploymentApplication" value-field="employmentApplication"/>
+        <entity-make-value entity-name="employment.MkEmploymentApplication" value-field="mkEmploymentApplication"/>
+		<entity-sequenced-id-primary value-field="employmentApplication"/>
+		<set field="mkEmploymentApplication.employmentApplicationId" from="employmentApplication.employmentApplicationId"/>
+        <entity-make-value entity-name="mantle.party.Person" value-field="Person"/>
+		<script>
+			context.resume = "dbresource://employmentApplication/"+employmentApplication.employmentApplicationId
+			def resumeReference = ec.getResource().getLocationReference(context.resume)
+			resumeReference.putStream(context.resumeFile.getInputStream())
+			def resource = resumeReference.getDbResourceFile()
+			resource.set("mimeType", context.resumeFile.getContentType())
+			resource.update()
+		</script>
+        <entity-set value-field="mkEmploymentApplication" include="all"/>
+        <entity-set value-field="employmentApplication" include="all"/>
+        <entity-create value-field="employmentApplication"/>
+		<entity-create value-field="mkEmploymentApplication"/>
+    </actions>
+</service>
+
+<service verb="get" noun="EmploymentApplication" type="inline" allow-remote="true">
+	<in-parameters>
+		<parameter name="employmentApplicationId"/>
+	</in-parameters>
+	<out-parameters>
+	</out-parameters>
+	<actions>
+		<script>
+			ec.getWeb().sendResourceResponse("dbresource://employmentApplication/"+context.partyId)
+		</script>
+		<return />
+	</actions>
+</service>
+</services>
