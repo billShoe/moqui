@@ -42,8 +42,15 @@
 		</script>
         <entity-set value-field="mkEmploymentApplication" include="all"/>
         <entity-set value-field="employmentApplication" include="all"/>
+		<set field="employmentApplication.statusId" value="AppNew"/>
         <entity-create value-field="employmentApplication"/>
 		<entity-create value-field="mkEmploymentApplication"/>
+		<set field="emailTemplateId" value="NEW_APPLICATION"/>
+		<set field="toAddresses" from="email"/>
+        <service-call name="org.moqui.impl.EmailServices.send#Email" in-map="context" out-map="context"/>
+		<set field="emailTemplateId" value="NEW_CHALLENGE"/>
+		<set field="toAddresses" from="email"/>
+        <service-call name="org.moqui.impl.EmailServices.send#Email" in-map="context" out-map="context"/>
     </actions>
 </service>
 
@@ -55,9 +62,24 @@
 	</out-parameters>
 	<actions>
 		<script>
-			ec.getWeb().sendResourceResponse("dbresource://employmentApplication/"+context.partyId)
+			ec.getWeb().sendResourceResponse("dbresource://employmentApplication/"+context.employmentApplicationId)
 		</script>
 		<return />
+	</actions>
+</service>
+
+<service verb="delete" noun="EmploymentApplication" type="inline" allow-remote="true">
+	<in-parameters>
+		<parameter name="employmentApplicationId"/>
+	</in-parameters>
+	<out-parameters>
+	</out-parameters>
+	<actions>
+        <entity-find-one entity-name="employment.MkEmploymentApplication" value-field="MkEmploymentApplication"/>
+		<entity-find-one entity-name="mantle.humanres.employment.EmploymentApplication" value-field="EmploymentApplication"/>
+
+		<entity-delete entity-name="employment.MkEmploymentApplication" value-field="MkEmploymentApplication"/>
+		<entity-delete entity-name="mantle.humanres.employment.EmploymentApplication" value-field="EmploymentApplication"/>
 	</actions>
 </service>
 </services>

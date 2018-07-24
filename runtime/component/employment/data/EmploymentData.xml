@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<entity-facade-xml type="seed">
+	<moqui.basic.StatusType statusTypeId="employmentApplicationStatus" description="Application status for employment applications."/>
+
+	<moqui.basic.StatusItem statusId="AppNew" statusTypeId="EmploymentApplication" description="New Applicant"/>
+	<moqui.basic.StatusItem statusId="AppChallenge" statusTypeId="EmploymentApplication" description="Sent challenge"/>
+	<moqui.basic.StatusItem statusId="AppInterview" statusTypeId="EmploymentApplication" description="Applicant being interviewd"/>
+	<moqui.basic.StatusItem statusId="AppTesting" statusTypeId="EmploymentApplication" description="Applicant being tested"/>
+	<moqui.basic.StatusItem statusId="AppBackgroundCheck" statusTypeId="EmploymentApplication" description="Checking background for applicant"/>
+	<moqui.basic.StatusItem statusId="AppHired" statusTypeId="EmploymentApplication" description="Applicant hired"/>
+	<moqui.basic.StatusItem statusId="AppRejected" statusTypeId="EmploymentApplication" description="Applicant rejected"/>
+	<moqui.basic.StatusItem statusId="AppNotInterested" statusTypeId="EmploymentApplication" description="Applicant not interested"/>
+
+</entity-facade-xml>

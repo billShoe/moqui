@@ -1,0 +1,6 @@
+ <moqui.basic.email.EmailTemplate emailTemplateId="NEW_CHALLENGE"
+ description="MK Employment Challenge"
+ emailServerId="SYSTEM" webappName="webroot"
+ bodyScreenLocation="component://employment/screen/emailChallenge.xml"
+ fromAddress="cole.halsell@mkdecision.com" ccAddresses="" bccAddresses=""
+ subject="MK Employment Challenge"/>

@@ -4,10 +4,16 @@
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/xml-screen-2.1.xsd">
     
+
 	<transition name="findMkEmploymentApplication"><default-response url="."/></transition>
 
- 	<transition name="deleteLocalizedEntityField">
- 		<service-call name="delete#moqui.basic.LocalizedEntityField"/>
+	<transition name="getEmploymentApplication">
+ 		<service-call name="employment.EmploymentServices.get#EmploymentApplication"/>
+ 		<default-response url="."/>
+ 	</transition>
+
+	<transition name="deleteEmploymentApplication">
+ 		<service-call name="employment.EmploymentServices.delete#EmploymentApplication"/>
  		<default-response url="."/>
  	</transition>
 
@@ -19,6 +25,9 @@
 	<form-list name="ListMkEmploymentApplications" list="mkEmploymentApplicationList" transition="findMkEmploymentApplication">
 			<row-actions>
 				<entity-find-one value-field="person" entity-name="mantle.party.Person" auto-field-map="context" />
+				<entity-find-one value-field="employmentApplication" entity-name="mantle.humanres.employment.EmploymentApplication" auto-field-map="context" />
+				<entity-find-one value-field="statusItem" entity-name="moqui.basic.StatusItem" auto-field-map="employmentApplication" />
+				<entity-find-one value-field="emplPosition" entity-name="mantle.humanres.position.EmplPosition" auto-field-map="employmentApplication" />
 			</row-actions>
 		<field name="PartyId" from="person.partyId">
 			<header-field show-order-by="true">
@@ -30,6 +39,21 @@
             <text-find hide-options="true" size="10"/></header-field>
         <default-field><display/></default-field>
     	</field>
+		<!-- <field name="pseudoId" from="emplPosition.pseudoId">
+			<header-field show-order-by="true">
+			<text-find hide-options="true" size="10"/></header-field>
+			<default-field><display /></default-field>
+		</field> -->
+		<field name="EmplPositionId" from="employmentApplication.emplPositionId">
+			<header-field show-order-by="true">
+			<text-find hide-options="true" size="10"/></header-field>
+			<default-field><display /></default-field>
+		</field>
+		<field name="description" from="statusItem.description">
+			<header-field show-order-by="true">
+			<text-find hide-options="true" size="10"/></header-field>
+			<default-field><display /></default-field>
+		</field>
 		<field name="firstName">
         	<header-field show-order-by="true">
             <text-find hide-options="true" size="10"/></header-field>
@@ -50,11 +74,11 @@
             <text-find hide-options="true" size="20"/></header-field>
         <default-field><display/></default-field>
     	</field>
-		<field name="resume">
+		<field name="submitButton">
         	<header-field show-order-by="true">
             </header-field>
-        <default-field>
- 			<link text="Resume" url="dbresource://employmentApplication/100000"></link>
+        <default-field title="Resume">
+ 			<link text="Resume" url="getEmploymentApplication"></link>
 		</default-field>
     	</field>
 			<field name="lastUpdatedStamp">
@@ -62,14 +86,11 @@
             </header-field>
         <default-field><display/></default-field>
     	</field>
- 		<field name="delete">
- 			<header-field title="Find"><submit/></header-field>
- 		<default-field>
- 			<link text="Delete" url="deleteLocalizedEntityField">
- 			<parameter name="entityName"/>
- 			<parameter name="fieldName"/><parameter name="locale"/></link>
- 		</default-field>
- 		</field>
+		<field name="deleteButton">
+        <default-field title="">
+ 			<link text="Delete" url="deleteEmploymentApplication"></link>
+		</default-field>
+    	</field>
 	</form-list>
 	</widgets>
 </screen>

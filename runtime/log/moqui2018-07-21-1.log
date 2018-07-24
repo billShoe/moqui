@@ -1,0 +1,252 @@
+--- 2018-07-21 00:14:13.862 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100517 (last run 2018-07-20 23:19:31.577, schedule 2018-07-21T00:00-07:00[US/Pacific])
+--- 2018-07-21 00:14:13.875 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 11ms
+--- 2018-07-21 00:14:13.876 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 00:14:13.876 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T00:14:13.855-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 00:14:13.958 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-20 23:19:31.577, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 00:14:13.959 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 01:00:13.852 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100518 (last run 2018-07-21 00:14:13.855, schedule 2018-07-21T01:00-07:00[US/Pacific])
+--- 2018-07-21 01:00:13.872 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 12ms
+--- 2018-07-21 01:00:13.873 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 01:00:13.873 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T01:00:13.849-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 01:00:13.952 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 00:14:13.855, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 01:00:13.953 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 02:00:54.607 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job clean_ArtifactData_daily run 100519 (last run 2018-07-20 02:00:47.9, schedule 2018-07-21T02:00-07:00[US/Pacific])
+--- 2018-07-21 02:00:54.628 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 10ms
+--- 2018-07-21 02:00:54.629 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 02:00:54.633 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job clean_ServiceJobRun_daily run 100520 (last run 2018-07-20 02:00:47.9, schedule 2018-07-21T02:00-07:00[US/Pacific])
+--- 2018-07-21 02:00:54.635 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job clean_ElasticSearchLogMessages_daily run 100521 (last run 2018-07-20 02:00:47.9, schedule 2018-07-21T02:00-07:00[US/Pacific])
+--- 2018-07-21 02:00:54.639 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100522 (last run 2018-07-21 01:00:13.849, schedule 2018-07-21T02:00-07:00[US/Pacific])
+--- 2018-07-21 02:00:54.640 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 4 Service Jobs starting 2018-07-21T02:00:54.605-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 02:00:54.904 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ Removed 12 ArtifactHit records and 0 ArtifactHitBin records.
+--- 2018-07-21 02:00:54.913 [  MoquiWorker-3] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ Removed 0 ServiceJobRun records.
+--- 2018-07-21 02:00:55.012 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ Deleted 0 type LogMessage documents from index moqui_logs with days to keep 90 and query null
+--- 2018-07-21 02:00:55.012 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Deleted 0 type LogMessage documents from index moqui_logs with days to keep 90 and query null
+--- 2018-07-21 02:00:55.061 [  MoquiWorker-1] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 01:00:13.849, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 02:00:55.063 [  MoquiWorker-1] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 5ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 03:33:46.918 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100523 (last run 2018-07-21 02:00:54.605, schedule 2018-07-21T03:00-07:00[US/Pacific])
+--- 2018-07-21 03:33:46.933 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 13ms
+--- 2018-07-21 03:33:46.933 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 03:33:46.934 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T03:33:46.911-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 03:33:47.007 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 02:00:54.605, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 03:33:47.008 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 06:19:39.086 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100524 (last run 2018-07-21 03:33:46.911, schedule 2018-07-21T06:00-07:00[US/Pacific])
+--- 2018-07-21 06:19:39.102 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 15ms
+--- 2018-07-21 06:19:39.102 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 06:19:39.102 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T06:19:39.080-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 06:19:39.224 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 03:33:46.911, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 06:19:39.226 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 5ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 07:57:54.922 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100525 (last run 2018-07-21 06:19:39.08, schedule 2018-07-21T07:00-07:00[US/Pacific])
+--- 2018-07-21 07:57:54.937 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 14ms
+--- 2018-07-21 07:57:54.937 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 07:57:54.937 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T07:57:54.915-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 07:57:55.018 [  MoquiWorker-1] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 06:19:39.08, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 07:57:55.020 [  MoquiWorker-1] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 6ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 08:00:54.916 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100526 (last run 2018-07-21 07:57:54.915, schedule 2018-07-21T08:00-07:00[US/Pacific])
+--- 2018-07-21 08:00:54.917 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T08:00:54.913-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 08:00:54.997 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 07:57:54.915, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 08:00:54.998 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 2ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 09:15:49.473 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100527 (last run 2018-07-21 08:00:54.913, schedule 2018-07-21T09:00-07:00[US/Pacific])
+--- 2018-07-21 09:15:49.493 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 18ms
+--- 2018-07-21 09:15:49.494 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 09:15:49.494 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T09:15:49.468-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 09:15:49.566 [  MoquiWorker-4] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 08:00:54.913, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 09:15:49.567 [  MoquiWorker-4] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 10:49:12.313 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100528 (last run 2018-07-21 09:15:49.468, schedule 2018-07-21T10:00-07:00[US/Pacific])
+--- 2018-07-21 10:49:12.323 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 8ms
+--- 2018-07-21 10:49:12.324 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 10:49:12.324 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T10:49:12.307-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 10:49:12.406 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 09:15:49.468, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 10:49:12.408 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 4ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 11:37:50.549 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100529 (last run 2018-07-21 10:49:12.307, schedule 2018-07-21T11:00-07:00[US/Pacific])
+--- 2018-07-21 11:37:50.559 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 8ms
+--- 2018-07-21 11:37:50.559 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 11:37:50.559 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T11:37:50.544-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 11:37:50.642 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 10:49:12.307, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 11:37:50.643 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 4ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 14:22:14.439 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100530 (last run 2018-07-21 11:37:50.544, schedule 2018-07-21T14:00-07:00[US/Pacific])
+--- 2018-07-21 14:22:14.487 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 42ms
+--- 2018-07-21 14:22:14.488 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 14:22:14.491 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T14:22:13.465-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 14:22:14.794 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 11:37:50.544, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 14:22:14.797 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 18ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 15:16:19.594 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100531 (last run 2018-07-21 14:22:13.465, schedule 2018-07-21T15:00-07:00[US/Pacific])
+--- 2018-07-21 15:16:19.646 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 47ms
+--- 2018-07-21 15:16:19.647 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 15:16:19.649 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T15:16:19.575-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 15:16:19.834 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 14:22:13.465, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 15:16:19.836 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 13ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 15:16:22.172 [scheduler][T#1]] WARN   org.elasticsearch.monitor.jvm.JvmGcMonitorService []
+ [gc][19167] overhead, spent [634ms] collecting in the last [1s]
+--- 2018-07-21 16:10:47.996 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100532 (last run 2018-07-21 15:16:19.575, schedule 2018-07-21T16:00-07:00[US/Pacific])
+--- 2018-07-21 16:10:48.032 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 22ms
+--- 2018-07-21 16:10:48.032 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 16:10:48.034 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T16:10:47.965-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 16:10:48.192 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 15:16:19.575, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 16:10:48.194 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 8ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 17:00:37.475 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100533 (last run 2018-07-21 16:10:47.965, schedule 2018-07-21T17:00-07:00[US/Pacific])
+--- 2018-07-21 17:00:37.497 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 20ms
+--- 2018-07-21 17:00:37.498 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 17:00:37.499 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T17:00:37.470-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 17:00:37.619 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 16:10:47.965, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 17:00:37.623 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 10ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 18:00:37.475 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100534 (last run 2018-07-21 17:00:37.47, schedule 2018-07-21T18:00-07:00[US/Pacific])
+--- 2018-07-21 18:00:37.484 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 8ms
+--- 2018-07-21 18:00:37.484 [pool-2-thread-1] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 18:00:37.484 [pool-2-thread-1] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T18:00:37.472-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 18:00:37.574 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 17:00:37.47, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 18:00:37.575 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 4ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 19:00:38.525 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100535 (last run 2018-07-21 18:00:37.472, schedule 2018-07-21T19:00-07:00[US/Pacific])
+--- 2018-07-21 19:00:38.534 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 7ms
+--- 2018-07-21 19:00:38.535 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 19:00:38.535 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T19:00:38.522-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 19:00:38.616 [  MoquiWorker-1] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 18:00:37.472, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 19:00:38.617 [  MoquiWorker-1] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 20:31:59.736 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100536 (last run 2018-07-21 19:00:38.522, schedule 2018-07-21T20:00-07:00[US/Pacific])
+--- 2018-07-21 20:31:59.766 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 27ms
+--- 2018-07-21 20:31:59.767 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 20:31:59.768 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T20:31:59.720-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 20:32:00.044 [  MoquiWorker-2] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 19:00:38.522, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 20:32:00.047 [  MoquiWorker-2] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 7ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 21:00:59.721 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100537 (last run 2018-07-21 20:31:59.72, schedule 2018-07-21T21:00-07:00[US/Pacific])
+--- 2018-07-21 21:00:59.733 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 8ms
+--- 2018-07-21 21:00:59.733 [pool-2-thread-4] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 21:00:59.733 [pool-2-thread-4] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T21:00:59.718-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 21:00:59.809 [  MoquiWorker-1] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 20:31:59.72, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 21:00:59.810 [  MoquiWorker-1] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 22:01:00.587 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100538 (last run 2018-07-21 21:00:59.718, schedule 2018-07-21T22:00-07:00[US/Pacific])
+--- 2018-07-21 22:01:00.598 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 8ms
+--- 2018-07-21 22:01:00.598 [pool-2-thread-3] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 22:01:00.599 [pool-2-thread-3] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T22:01:00.585-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 22:01:00.672 [  MoquiWorker-1] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 21:00:59.718, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 22:01:00.673 [  MoquiWorker-1] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 2ms; updated 0 Organization and 0 Period summary records
+--- 2018-07-21 23:01:00.582 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Running job recalculate_GlAccountOrgSummaries run 100539 (last run 2018-07-21 22:01:00.585, schedule 2018-07-21T23:00-07:00[US/Pacific])
+--- 2018-07-21 23:01:00.596 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found entities in 44 files in 12ms
+--- 2018-07-21 23:01:00.596 [pool-2-thread-2] INFO              org.moqui.impl.entity.EntityFacadeImpl []
+ Found 1 view-entity definitions in database (DbViewEntity records)
+--- 2018-07-21 23:01:00.597 [pool-2-thread-2] INFO           org.moqui.impl.service.ScheduledJobRunner []
+ Ran 1 Service Jobs starting 2018-07-21T23:01:00.579-07:00[US/Pacific] (active: 4, paused: 6)
+--- 2018-07-21 23:01:00.671 [  MoquiWorker-3] INFO             org.moqui.impl.context.LoggerFacadeImpl []
+ [Recalculate GlAccountOrgSummaries] lastRunTime 2018-07-21 22:01:00.585, 3 time periods, organizations: [ORG_ZIZI_CORP]
+--- 2018-07-21 23:01:00.672 [  MoquiWorker-3] INFO            org.moqui.impl.context.MessageFacadeImpl []
+ Updated GL Account Org Summaries for orgs [ORG_ZIZI_CORP] in 3ms; updated 0 Organization and 0 Period summary records

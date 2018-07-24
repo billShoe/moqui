@@ -6,5 +6,6 @@
             <subscreens-item name="employeeWorkspace" menu-title="Employee Workspace" menu-index="10"
                     location="component://employment/screen/employment.xml"/>
         </screen>
+		<service-type name="script" runner-class="org.moqui.impl.service.runner.ScriptServiceRunner"/>
     </screen-facade>
 </moqui-conf>
